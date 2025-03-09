@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="D:\Notepad ++/TLOGO.png" type="image/x-icon">
+    <title>Calendar Notifications</title>
+    <link rel="stylesheet" href="TelephinusDesign.css">
+</head>
+<body>
+    <div id="role-selection">
+        <h1>Select Your Role</h1>
+        <button id="student-btn">Student</button>
+        <button id="teacher-btn">Teacher</button>
+    </div>
+
+    <div id="auth-options" style="display: none;">
+        <h1>Welcome, <span id="role"></span></h1>
+        <button id="signup-btn">Sign Up</button>
+        <button id="login-btn">Log In</button>
+    </div>
+
+    <div id="signup-form" style="display: none;">
+        <h1>Sign Up</h1>
+        <form id="signup">
+            <input type="text" id="first-name" placeholder="First Name" required>
+            <input type="text" id="last-name" placeholder="Last Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <button id="back-to-auth">Back</button>
+    </div>
+
+    <div id="login-form" style="display: none;">
+        <h1>Log In</h1>
+        <form id="login">
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Log In</button>
+        </form>
+        <button id="back-to-auth-login">Back</button>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <div class="navbar">
+            <div class="profile">
+                <img src="profile-icon.png" alt="Profile">
+                <span>Alex Pen</span>
+            </div>
+            <div class="announcements">
+                <span>Announcements</span>
+            </div>
+            <div class="logout">
+                <span>Log Out</span>
+            </div>
+        </div>
+
+        <div class="calendar">
+            <h1>FEBRUARY 2025</h1>
+            <div class="days">
+                <div class="day">SUN</div>
+                <div class="day">MON</div>
+                <div class="day">TUE</div>
+                <div class="day">WED</div>
+                <div class="day">THU</div>
+                <div class="day">FRI</div>
+                <div class="day">SAT</div>
+            </div>
+            <div class="dates">
+                <!-- Dates will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="notifications">
+            <h2>Notifications</h2>
+            <ul id="notification-list">
+                <!-- Notifications will be populated by JavaScript -->
+            </ul>
+        </div>
+
+        <div class="announcements-section">
+            <h2>Announcements</h2>
+            <div id="announcements-list">
+                <!-- Announcements will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="pending-activities">
+            <h2>Pending Activities</h2>
+            <ul id="pending-activities-list">
+                <!-- Pending activities will be populated by JavaScript -->
+            </ul>
+        </div>
+
+        <div class="profile-section">
+            <h2>Profile</h2>
+            <div id="profile-info">
+                <!-- Profile information will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="TelephinusFunction.js"></script>
+</body>
+</html>
