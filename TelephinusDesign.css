@@ -16,6 +16,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 100%;
+    max-width: 400px;
 }
 
 button {
@@ -26,6 +28,7 @@ button {
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
+    width: 100%;
 }
 
 button:hover {
@@ -42,6 +45,7 @@ input {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    width: 100%;
 }
 
 .navbar {
@@ -53,6 +57,7 @@ input {
     padding: 10px 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .navbar .profile, .navbar .announcements, .navbar .logout {
@@ -64,6 +69,7 @@ input {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .calendar h1 {
@@ -111,6 +117,7 @@ input {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .notifications h2, .announcements-section h2, .pending-activities h2, .profile-section h2 {
@@ -129,4 +136,29 @@ input {
 
 #notification-list li:last-child, #announcements-list div:last-child, #pending-activities-list li:last-child {
     border-bottom: none;
+}
+
+@media (max-width: 600px) {
+    .days, .dates {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+    }
+
+    .day, .date {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .profile, .navbar .announcements, .navbar .logout {
+        margin: 5px 0;
+    }
+
+    .notifications, .announcements-section, .pending-activities, .profile-section {
+        padding: 10px;
+    }
 }
